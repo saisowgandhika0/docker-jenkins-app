@@ -5,5 +5,6 @@ def test_home_route():
     client = app.test_client()
     response = client.get("/")
     assert response.status_code == 200
-    assert b"Hello from Flask inside Docker!" in response.data
+    assert b"Welcome to Jenkins" in response.data 
+    assert b"CI/CD pipeline is running successfully" in response.data
 
